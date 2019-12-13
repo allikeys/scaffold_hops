@@ -15,6 +15,6 @@ def fetch_xml(url):
     if response.status_code != 200:
         response.raise_for_status()
     else: 
-        data = xmltodict(response.content, attr_prefix='')
+        data = xmltodict.parse(response.content, attr_prefix='')
 
     return json.loads(json.dumps(data))
