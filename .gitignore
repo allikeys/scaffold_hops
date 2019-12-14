@@ -1,3 +1,6 @@
+# Local Parameters
+localconfig.py
+
 # Data Directory
 data/
 .DS_Store/
