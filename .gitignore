@@ -1,5 +1,5 @@
-# Local Parameters
-localconfig.py
+# Configuration Parameters
+config.py
 
 # Data Directory
 data/
