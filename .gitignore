@@ -1,3 +1,6 @@
+# Configuration Parameters
+config.py
+
 # Data Directory
 data/
 .DS_Store/
