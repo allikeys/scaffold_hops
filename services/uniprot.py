@@ -41,3 +41,22 @@ def pdb2uniprotAC(pdb_ids):
     mapping_file = urllib.request.urlopen(req)
     return mapping_file
 
+def entry2ACC(ids):
+    """ID exchange for mapping PDB IDs to Uniprot IDs
+    Input: pdb_ids (list)
+    Output: Returns file object with mappings
+    """
+    url = 'https://www.uniprot.org/uploadlists/'
+
+    params = {
+    'from': 'ID',
+    'to': 'ACC',
+    'format': 'tab',
+    'query': ' '.join(ids)
+    }
+
+    data = urllib.parse.urlencode(params)
+    data = data.encode('utf-8')
+    req = urllib.request.Request(url, data)
+    mapping_file = urllib.request.urlopen(req)
+    return mapping_file
