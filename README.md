@@ -7,7 +7,7 @@
         * Supplementary Files
       
 ## Pocket Similarity Calculations
-    See https://github.com/allikeys/pocketFEATURE_analysis/ for instructions
+    [Calculation Instructions](https://github.com/allikeys/pocketFEATURE_analysis/)
 
 ## Ligand Similarity Calculations
     
