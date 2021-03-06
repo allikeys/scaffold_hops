@@ -18,8 +18,9 @@ Pipeline Components
             - output: matrix of ligand similarity scores
 
 ## Sequence Similarity Calculations
-
-    
+      1. Collect the sequences of protein chains involved in ligand binding. 
+      2. Use EMBOSS to computer Smith Waterman local sequence alignments on all sequences. 
+            - submitLocalAlignments.py 
 
 ## Scaffold Hop Score Calculations
     
