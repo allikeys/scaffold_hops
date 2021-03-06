@@ -20,7 +20,7 @@ def main():
                 if smiles_list[i][1] in ligands:
                         smile = smiles_list[i][1].encode('ascii', 'ignore')
                         smile = smile.rstrip()
-                        mol = [smile,  Chem.MolFromSmiles(smiles_list[i][0])]
+                        mol = [smile, Chem.MolFromSmiles(smiles_list[i][0])]
                         mols.append(mol)
 
         fingerprints = []
@@ -41,7 +41,7 @@ def main():
                 labels.append(fingerprints[j][0])
                 for k in range(numfps):
                         fingerprint_comparison_table[j][k] = DataStructs.FingerprintSimilarity(fingerprints[j][1], fingerprints[k][1])
-
+                print(fingerprint_comparison_table)
 
 
         df = pd.DataFrame(fingerprint_comparison_table, columns=labels)

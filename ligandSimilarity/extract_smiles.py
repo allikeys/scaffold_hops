@@ -23,7 +23,7 @@ def main():
 		line = all_ligands_INFO[i]
 		split_line = re.split(r'\s+', line)
 		if split_line[1] in ligands_HET:
-			print(split_line[0])
+			print(split_line[0] + ',' + split_line[1])
 
 
 if __name__ == "__main__":
