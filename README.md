@@ -4,7 +4,7 @@
 * Ligand Similarity 
 * Sequence Similarity 
 * Scaffold Hop Score 
-* Supplementary Files
+* Supplementary Analysis
       
 ## Pocket Similarity Calculations
    [Calculation Instructions](https://github.com/allikeys/pocketFEATURE_analysis/)
@@ -12,10 +12,11 @@
 ## Ligand Similarity Calculations
       1. Get list of smiles strings:
             a. Download all smiles strings from the PDB ('all_smiles.txt'), get list of ligand ids of interest ('ligand_list.txt') 
-            b. Extract smiles of interest using using extract_smiles.py > ligand_smiles.txt
+            b. Run 'extract_smiles.py > ligand_smiles.txt'
+                  - requires: all_smiles.txt, ligand_list.txt
       
-      2. Get fingerprints using get_fingerprints.py
-            - requires ligand_smiles.txt and ligand_list.txt
+      2. get_fingerprints.py 
+            - requires: ligand_smiles.txt, ligand_list.txt
             - output: matrix of ligand similarity scores
 
 ## Sequence Similarity Calculations
@@ -26,9 +27,13 @@
             - submitLocalAlignments.py 
 
 ## Scaffold Hop Score Calculations
-      See 'Scaffold_hop_projection.ipynb' using all necessary pocket, ligand, and sequence similarity files to produce scaffold hop candidates. 
+      Scaffold_hop_projection.ipynb
+            - Requires: pocket, ligand, and sequence similarity files 
+            - Produces: scaffold hop candidates
 
-## Supplementary Files
-      'dataAnalysis.ipynb' provides additional data on relevant pocket, ligand, and sequence similarity matrices. 
+## Supplementary Analysis
+      dataAnalysis.ipynb
+            - Requires: pocket, ligand, and sequence similarity matrices
+            - Produces: Structural analysis of similarity matrices
     
       
